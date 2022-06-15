@@ -41,7 +41,7 @@ export default class Visualizer extends Component {
     return(
       <div className="flex p-4 box-content mr-2">
           {this.state.array.map((value, index) => (
-            <div className="bg-yellow-300 w-1px p-1.5 rounded-b-sm border" style={{height: 6*value+"px"}} key={index}></div>
+            <div className="bg-yellow-500 w-1px p-1.5 rounded-b-sm border border-yellow-600" style={{height: 6*value+"px"}} key={index}></div>
           ))}
       </div>
     );

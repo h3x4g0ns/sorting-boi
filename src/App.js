@@ -4,7 +4,7 @@ import Visualizer from "./Visualizer";
 export default class App extends Component {
   render() {
     return (
-      <div className="bg-gray-800 h-screen relative">
+      <div className="bg-gray-800 h-screen">
         <header className="font-mono text-4xl text-slate-50 pt-10 pl-10">
           <h1>Sorting Boi</h1>
         </header>
