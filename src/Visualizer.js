@@ -1,5 +1,4 @@
-import React from 'react';
-import Component from 'react';
+import { Component } from 'react';
 
 export default class Visualizer extends Component {
   constructor(props) {
@@ -10,36 +9,38 @@ export default class Visualizer extends Component {
       size: 100,
       max: 100
     };
+  }
 
+  componentDidMount() {
     this.generateArray();
   }
 
   generateArray = () => {
-    console.log("generating");
+    const array = [];
     for(let i = 0; i < this.state.size; i++) {
-      this.state.array[i] = Math.random() * this.state.max;
+      array[i] = parseInt(Math.random() * this.state.max);
     }
+    this.setState({array: array});
   }
 
-  /*sortArray = () => {
-    switch(this.state.algo) {
-      case "bubble":
-        bubbleSort();
-        break;
-      case "quick":
-        quicksort();
-        break;
-      default:
-        bubbleSort();
-        break;
-    }
-  }*/
+  // sortArray = () => {
+  //   switch(this.state.algo) {
+  //     case "bubble":
+  //       bubbleSort();
+  //       break;
+  //     case "quick":
+  //       quicksort();
+  //       break;
+  //     default:
+  //       bubbleSort();
+  //       break;
+  //   }
+  // }
 
   render() {
     return(
       <div className="flex">
-        {this.state.array.map((bar) => 
-          <div className="bg-green-30 h-1/4"></div>)}
+          <div className="bg-green-30 h-1/4"></div>
       </div>
     )
   }
