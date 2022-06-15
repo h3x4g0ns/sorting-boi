@@ -1,4 +1,5 @@
 import './App.css';
+import Visualizer from "./Visualizer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <h1>test1</h1>
         </div>
         <div className="bg-purple-800 pr-10 w-9/12">
-          <h1>test2</h1>
+          <Visualizer/ >
         </div>
       </div>
     </div>
