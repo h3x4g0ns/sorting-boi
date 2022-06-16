@@ -5,14 +5,19 @@ export default class Visualizer extends Component {
     super(props);
     this.state = {
       array: [],
-      algo: "bubble",
+      startSorting: props.startSorting,
+      algo: props.algo,
       size: 100,
       max: 100
     };
   }
 
+  componentWil
+
   componentDidMount() {
     this.generateArray();
+    console.log(this.state.algo);
+    console.log(this.state.startSorting);
   }
 
   generateArray = () => {
@@ -39,9 +44,9 @@ export default class Visualizer extends Component {
 
   render() {
     return(
-      <div className="flex p-4 box-content mr-2">
+      <div className="flex p-4 mr-2">
           {this.state.array.map((value, index) => (
-            <div className="bg-yellow-500 w-1px p-1.5 rounded-b-sm border border-yellow-600" style={{height: 6*value+"px"}} key={index}></div>
+            <div className="bg-yellow-500 max-w-xs p-1.5 rounded-b-sm border border-yellow-600" style={{height: 6*value+"px"}} key={index}></div>
           ))}
       </div>
     );
