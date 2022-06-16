@@ -23,6 +23,12 @@ export default class App extends Component {
     console.log(this.state.algo);
     this.setState({startSorting: true});
   }
+
+  triggerReset = () => {
+    console.log("reset");
+    this.setState({startSorting: false});
+    this.forceUpdate();
+  }
   
   render() {
     return (
@@ -38,6 +44,10 @@ export default class App extends Component {
             <button className="bg-blue-500 hover:bg-blue-700 text-white mt-5 font-bold py-2 px-4 rounded-full" 
                     onClick={this.triggerSorting}>
               Sort
+            </button>
+            <button className="bg-red-500 hover:bg-red-700 text-white mt-5 font-bold py-2 px-4 rounded-full" 
+                    onClick={this.triggerReset}>
+              Reset
             </button>
           </div>
           <div className="pr-10 w-5/6 mr-2">

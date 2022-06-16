@@ -12,8 +12,6 @@ export default class Visualizer extends Component {
     };
   }
 
-  componentWil
-
   componentDidMount() {
     this.generateArray();
     console.log(this.state.algo);
